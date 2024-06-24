@@ -1,0 +1,1519 @@
+{
+	"info": {
+		"_postman_id": "833e769d-3e40-4095-b178-14c3ec2a4395",
+		"name": "Sports EComm",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13530824"
+	},
+	"item": [
+		{
+			"name": "Sports Ecommerce Copy",
+			"item": [
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "1.Auth",
+							"item": [
+								{
+									"name": "Login",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "email",
+													"value": "admin@gmail.com",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "123",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/login",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"login"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "2. Customers",
+							"item": [
+								{
+									"name": "All",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": []
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"all"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Single",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "_id",
+													"value": "6268ed9f80619a4a586720df",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/single",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"single"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Add",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "name",
+													"value": "Customer 1",
+													"type": "text"
+												},
+												{
+													"key": "email",
+													"value": "customer2@gmail.com",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "1234",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/add",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"add"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "_id",
+													"value": "626a138e5e062301a9974527",
+													"type": "text"
+												},
+												{
+													"key": "status",
+													"value": "true",
+													"type": "text"
+												},
+												{
+													"key": "name",
+													"value": "Customer 2",
+													"type": "text"
+												},
+												{
+													"key": "email",
+													"value": "customer2@gmail.com",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "123",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/update",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"update"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "3. Category",
+							"item": [
+								{
+									"name": "All",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": []
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/category/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"category",
+												"all"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Single",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "_id",
+													"value": "62678e205be44e8bae7a77f0",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/category/single",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"category",
+												"single"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Add",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "Women",
+													"type": "text"
+												},
+												{
+													"key": "category_image",
+													"type": "file",
+													"src": "/C:/Users/HP/Downloads/test.png"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/category/add",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"category",
+												"add"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "_id",
+													"value": "6268f46e9102de38b2625dee",
+													"type": "text"
+												},
+												{
+													"key": "status",
+													"value": "false",
+													"type": "text"
+												},
+												{
+													"key": "category_image",
+													"type": "file",
+													"src": []
+												},
+												{
+													"key": "name",
+													"value": "Accesories",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/category/update",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"category",
+												"update"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "4. Sub Category",
+							"item": [
+								{
+									"name": "All",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": []
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/subcategory/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"subcategory",
+												"all"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Single",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "_id",
+													"value": "6274c802b441c37fa6c3324b",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/subcategory/single",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"subcategory",
+												"single"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Add",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "Tshirts",
+													"type": "text"
+												},
+												{
+													"key": "subcategory_image",
+													"type": "file",
+													"src": "/C:/Users/HP/Downloads/test.png"
+												},
+												{
+													"key": "categoryId",
+													"value": "6274c819b441c37fa6c3324f",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/subcategory/add",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"subcategory",
+												"add"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "_id",
+													"value": "6269162103bd225b7004b483",
+													"type": "text"
+												},
+												{
+													"key": "status",
+													"value": "true",
+													"type": "text"
+												},
+												{
+													"key": "subcategory_image",
+													"type": "file",
+													"src": []
+												},
+												{
+													"key": "name",
+													"value": "Rings",
+													"type": "text"
+												},
+												{
+													"key": "categoryId",
+													"value": "6268f46e9102de38b2625dee",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/subcategory/update",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"subcategory",
+												"update"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "5. Product",
+							"item": [
+								{
+									"name": "All",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": []
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/product/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"product",
+												"all"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Single",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "_id",
+													"value": "626928446df90316b74b2e50",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/admin/product/single",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"admin",
+												"product",
+												"single"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Add",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "White basic Tee",
+													"type": "text"
+												},
+												{
+													"key": "product_image",
+													"type": "file",
+													"src": "/C:/Users/Dell Optiplex/Desktop/images/default.jpg"
+												},
+												{
+													"key": "categoryId",
+													"value": "6274c819b441c37fa6c3324f",
+													"type": "text"
+												},
+												{
+													"key": "subcategoryId",
+													"value": "6274c9eeb441c37fa6c33254",
+													"type": "text"
+												},
+												{
+													"key": "price",
+													"value": "500",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/product/add",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"product",
+												"add"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "_id",
+													"value": "626928446df90316b74b2e50",
+													"type": "text"
+												},
+												{
+													"key": "status",
+													"value": "true",
+													"type": "text"
+												},
+												{
+													"key": "subcategory_image",
+													"type": "file",
+													"src": [],
+													"disabled": true
+												},
+												{
+													"key": "name",
+													"value": "Gold Ring",
+													"type": "text"
+												},
+												{
+													"key": "categoryId",
+													"value": "6268f46e9102de38b2625dee",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "subcategoryId",
+													"value": "",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "price",
+													"value": "4000",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/product/update",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"product",
+												"update"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "6.Orders",
+							"item": [
+								{
+									"name": "All",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": []
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/order/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"order",
+												"all"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Single",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "_id",
+													"value": "6278c53c8daa884da8b2b971",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/order/single",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"order",
+												"single"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "_id",
+													"value": "6274cb23b441c37fa6c33267",
+													"type": "text"
+												},
+												{
+													"key": "orderStatus",
+													"value": "3",
+													"description": " 1-> Placed , 2-> Confirmed , 3=> Shipped , 4=>Delivered , 5=> Cancelled\n",
+													"type": "text"
+												},
+												{
+													"key": "shipmentUrl",
+													"value": "xyz.com",
+													"description": "//optional",
+													"type": "text"
+												},
+												{
+													"key": "trackingId",
+													"value": "32561",
+													"description": "//optional",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/order/update",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"order",
+												"update"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "7. Dashboard",
+							"item": [
+								{
+									"name": "get dashboard",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{adminToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": []
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/dashboard",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"dashboard"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Order Detail",
+							"item": [
+								{
+									"name": "All",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{customerToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "orderId",
+													"value": "",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/orderDetail/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"orderDetail",
+												"all"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Customer",
+					"item": [
+						{
+							"name": "1.Auth",
+							"item": [
+								{
+									"name": "Login",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "email",
+													"value": "customer1@gmail.com",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "123",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/login",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"login"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Register",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "email",
+													"value": "customer12@gmail.com",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "123",
+													"type": "text"
+												},
+												{
+													"key": "name",
+													"value": "Customer 12",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/add",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"add"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Profile",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{customerToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "_id",
+													"value": "626a14d24b9ebd193273a4bb",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/user/single",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"user",
+												"single"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "2. Category",
+							"item": [
+								{
+									"name": "All",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": []
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/category/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"category",
+												"all"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "3. Sub Category",
+							"item": [
+								{
+									"name": "All",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "categoryId",
+													"value": "628dba6128202a9e4b63b89a",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/subcategory/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"subcategory",
+												"all"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Single",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{customerToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "_id",
+													"value": "63f4a8a4949901cd0eca3d9d",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/subcategory/single",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"subcategory",
+												"single"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Single",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "_id",
+													"value": "62678e205be44e8bae7a77f0",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/category/single",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"category",
+												"single"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "4. Order",
+							"item": [
+								{
+									"name": "All",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{customerToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": []
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/order/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"order",
+												"all"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Single",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{customerToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "_id",
+													"value": "626a22f6944654394c0c58e9",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/order/single",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"order",
+												"single"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Add",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{customerToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "userId",
+													"value": "6274cacab441c37fa6c33261",
+													"type": "text"
+												},
+												{
+													"key": "address",
+													"value": "hno 3 green park ,Near Bus stand, Jalandhar",
+													"type": "text"
+												},
+												{
+													"key": "shipmentUrl",
+													"value": "",
+													"type": "text"
+												},
+												{
+													"key": "trackingId",
+													"value": "",
+													"type": "text"
+												},
+												{
+													"key": "paymentMethod",
+													"value": "",
+													"type": "text"
+												},
+												{
+													"key": "orderDetail",
+													"value": "[{'productId':'', 'quantity':2, 'price':500}]",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/order/add",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"order",
+												"add"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Cancel Order",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{customerToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "orderStatus",
+													"value": "5",
+													"type": "text"
+												},
+												{
+													"key": "_id",
+													"value": "6274cb23b441c37fa6c33267",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/order/update",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"order",
+												"update"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "cart",
+							"item": [
+								{
+									"name": "add",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{customerToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "userId",
+													"value": "",
+													"type": "text"
+												},
+												{
+													"key": "productId",
+													"value": "",
+													"type": "text"
+												},
+												{
+													"key": "quantity",
+													"value": "",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/cart/add",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"cart",
+												"add"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "all",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{cutomerToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "userId",
+													"value": "",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/cart/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"cart",
+												"all"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "remove",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{cutomerToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "_id",
+													"value": "",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/cart/remove",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"cart",
+												"remove"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Order Detail",
+							"item": [
+								{
+									"name": "All",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "{{customerToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "orderId",
+													"value": "",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/orderDetail/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"orderDetail",
+												"all"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
